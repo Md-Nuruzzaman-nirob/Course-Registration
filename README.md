@@ -1,4 +1,4 @@
-#### answer to the question no-1 :
+# answer to the question no-1 :
 
 # Online Course Platform
 
@@ -66,7 +66,7 @@ Welcome to our online course platform, where you can access a variety of courses
 
 We look forward to helping you on your journey to becoming a proficient programmer!
 
-#### answer to the question no-2 :
+# answer to the question no-2 :
 
 "In the assignment project, I managed state using React's useState hook, which allowed me to handle and update state variables efficiently. There were two main pieces of state I needed to manage:
 
