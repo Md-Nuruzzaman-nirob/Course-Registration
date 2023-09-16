@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 
 const CourseCart = ({ courseCartData, credit }) => {
+  const totalPrice = courseCartData.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.price;
+  }, 0);
+  console.log(totalPrice);
+
   return (
     <div className="col-span-1 ">
       <div className="shadow-xl rounded-lg px-4 xl:px-6">
@@ -26,7 +31,7 @@ const CourseCart = ({ courseCartData, credit }) => {
           <small className="">Total Credit Hour : {credit}</small>
         </h3>
         <h3 className="md:text-xl lg:text-2xl font-bold px-1 py-2 md:py-4 text-[#1C1B1B99]">
-          <small className="">Total Price : USD</small>
+          <small className="">Total Price : {Math.round(totalPrice)} USD</small>
         </h3>
       </div>
     </div>
@@ -38,6 +43,7 @@ CourseCart.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
     })
   ).isRequired,
   credit: PropTypes.number.isRequired,
