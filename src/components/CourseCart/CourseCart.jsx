@@ -4,7 +4,6 @@ const CourseCart = ({ courseCartData, credit }) => {
   const totalPrice = courseCartData.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.price;
   }, 0);
-  console.log(totalPrice);
 
   return (
     <div className="col-span-1 ">
